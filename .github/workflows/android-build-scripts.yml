@@ -25,7 +25,7 @@ jobs:
           unzip -q -o ndk.zip -d .ndk
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: run the build script
-        run: ./android.sh -d --enable-android-media-codec --enable-android-zlib --enable-gpl --skip-dav1d --skip-aom --skip-vpx --skip-webp --skip-x264 --skip-x265 --skip-xvid --skip-kvazaar --skip-theora --skip-libvidstab
+        run: ./android.sh -d --enable-gpl --enable-android-media-codec --enable-android-zlib --enable-lame --enable-opus --enable-opencore-amr --enable-vo-amrwbenc --enable-twolame --enable-shine --enable-speex --enable-soxr --enable-libilbc --disable-lib-dav1d --disable-lib-aom --disable-lib-vpx --disable-lib-webp --disable-lib-kvazaar --disable-lib-theora --disable-lib-x264 --disable-lib-x265 --disable-lib-xvidcore --disable-lib-vidstab --disable-lib-openh264 --disable-lib-zimg --disable-lib-tesseract --disable-lib-chromaprint
       - name: prepare and upload main aar
         run: |
           AAR_PATH=$(find prebuilt -type f -name 'ffmpeg-kit.aar')
