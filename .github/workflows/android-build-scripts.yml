@@ -50,7 +50,7 @@ jobs:
           unzip -q -o ndk.zip -d .ndk
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: run the build script
-        run: ./android.sh -d --enable-android-media-codec --enable-android-zlib --enable-gpl --enable-libmp3lame --skip-dav1d --skip-aom --skip-vpx --skip-webp --skip-x264 --skip-x265 --skip-xvid --skip-kvazaar --skip-theora --skip-libvidstab
+        run: ./android.sh -d --enable-android-media-codec --enable-android-zlib --enable-gpl --skip-dav1d --skip-aom --skip-vpx --skip-webp --skip-x264 --skip-x265 --skip-xvid --skip-kvazaar --skip-theora --skip-libvidstab
       - name: print build logs
         if: ${{ always() }}
         run: cat build.log
