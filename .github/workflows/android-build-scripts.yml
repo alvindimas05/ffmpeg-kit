@@ -24,6 +24,10 @@ jobs:
           curl -s "https://dl.google.com/android/repository/android-ndk-r25b-linux.zip" -o ndk.zip
           unzip -q -o ndk.zip -d .ndk
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
+      - name: install dependencies
+        run: |
+          sudo apt-get update -y && \
+          sudo apt-get install -y libmp3lame-dev
       - name: run the build script
         run: ./android.sh -d
       - name: prepare and upload main aar
