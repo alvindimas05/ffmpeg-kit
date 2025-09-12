@@ -25,7 +25,9 @@ jobs:
           unzip -q -o ndk.zip -d .ndk
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: install dependencies
-        run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool pkg-config curl git doxygen nasm cmake gcc gperf texinfo yasm bison autogen wget autopoint meson ninja-build ragel groff gtk-doc-tools libtasn1-6-dev
+        run: |
+          sudo apt-get update && \
+          sudo apt-get install -y libmp3lame-dev autoconf automake libtool pkg-config curl git doxygen nasm cmake gcc gperf texinfo yasm bison autogen wget autopoint meson ninja-build ragel groff gtk-doc-tools libtasn1-6-dev
       - name: run the build script
         run: ./android.sh -d --enable-lame
       - name: prepare and upload main aar
