@@ -472,6 +472,9 @@ fi
   --disable-vaapi \
   --disable-vdpau \
   \
+  --extra-ldflags=-L/usr/local/lib \
+  --extra-cflags=-I/usr/local/include \
+  \
   --disable-everything \
   --enable-protocol=file,pipe \
   --enable-demuxer=mp3,flac,aac,mov,wav,ogg,alac,opus,image2 \

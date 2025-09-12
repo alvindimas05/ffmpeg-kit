@@ -27,7 +27,7 @@ jobs:
       - name: install dependencies
         run: |
           sudo apt-get update -y && \
-          sudo apt-get install -y libmp3lame-dev
+          sudo apt-get install -y nasm yasm libmp3lame-dev
       - name: run the build script
         run: ./android.sh -d
       - name: prepare and upload main aar
