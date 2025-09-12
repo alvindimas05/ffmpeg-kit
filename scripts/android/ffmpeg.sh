@@ -471,6 +471,17 @@ fi
   --disable-nvenc \
   --disable-vaapi \
   --disable-vdpau \
+  \
+  --disable-everything \
+  --enable-protocol=file,pipe \
+  --enable-demuxer=mp3,flac,aac,mov,wav,ogg,alac,opus,image2 \
+  --enable-decoder=mp3,flac,aac,alac,opus,vorbis,pcm_s16le,pcm_s24le,pcm_s32le \
+  --enable-parser=aac,flac,mpegaudio,vorbis \
+  --enable-muxer=mp3 \
+  --enable-encoder=libmp3lame \
+  --enable-libmp3lame \
+  --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
+  \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
 if [[ $? -ne 0 ]]; then
