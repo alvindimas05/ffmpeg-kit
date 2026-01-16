@@ -29,7 +29,7 @@ jobs:
           sudo apt-get update && \
           sudo apt-get install -y libmp3lame-dev autoconf automake libtool pkg-config curl git doxygen nasm cmake gcc gperf texinfo yasm bison autogen wget autopoint meson ninja-build ragel groff gtk-doc-tools libtasn1-6-dev
       - name: run the build script
-        run: ./android.sh -d --enable-lame
+        run: ./android.sh -d
       - name: prepare and upload main aar
         run: |
           AAR_PATH=$(find prebuilt -type f -name 'ffmpeg-kit.aar')
