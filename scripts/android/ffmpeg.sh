@@ -475,15 +475,10 @@ fi
   --disable-everything \
   --enable-protocol=file \
   --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
-  # Input Demuxers
   --enable-demuxer=flac,aac,mov,wav,ogg,mp3,alac,opus,image2 \
-  # Audio & Image Decoders
   --enable-decoder=flac,aac,alac,mp3,opus,pcm_s16le,pcm_s24le,pcm_s32le,vorbis,mjpeg,png,bmp \
-  # Parsers
   --enable-parser=aac,flac,mpegaudio,vorbis \
-  # Output Muxers
   --enable-muxer=wav,image2,image2pipe \
-  # Output Encoders
   --enable-encoder=pcm_s16le,pcm_s24le,pcm_s32le,png,bmp
   \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
