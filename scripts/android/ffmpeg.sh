@@ -472,15 +472,19 @@ fi
   --disable-vaapi \
   --disable-vdpau \
   \
-  --disable-everything \
-  --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
+--disable-everything \
   --enable-protocol=file \
-  --enable-demuxer=mp3,flac,aac,mov,wav,ogg,alac,opus,image2 \
-  --enable-decoder=mp3,flac,aac,alac,opus,vorbis,pcm_s16le,pcm_s24le,pcm_s32le,ac3,eac3 \
-  --enable-parser=aac,flac,mpegaudio,vorbis,ac3 \
-  --enable-muxer=mp3 \
-  --enable-encoder=libmp3lame \
-  --enable-libmp3lame \
+  --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
+  # Input Demuxers
+  --enable-demuxer=flac,aac,mov,wav,ogg,mp3,alac,opus,image2 \
+  # Audio & Image Decoders
+  --enable-decoder=flac,aac,alac,mp3,opus,pcm_s16le,pcm_s24le,pcm_s32le,vorbis,mjpeg,png,bmp \
+  # Parsers
+  --enable-parser=aac,flac,mpegaudio,vorbis \
+  # Output Muxers
+  --enable-muxer=wav,image2,image2pipe \
+  # Output Encoders
+  --enable-encoder=pcm_s16le,pcm_s24le,pcm_s32le,png,bmp
   \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
