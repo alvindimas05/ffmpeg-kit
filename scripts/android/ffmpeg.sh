@@ -479,7 +479,7 @@ fi
   --enable-decoder=flac,aac,alac,mp3,opus,pcm_s16le,pcm_s24le,pcm_s32le,vorbis,mjpeg,png,bmp \
   --enable-parser=aac,flac,mpegaudio,vorbis \
   --enable-muxer=wav,image2,image2pipe \
-  --enable-encoder=pcm_s16le,pcm_s24le,pcm_s32le,png,bmp
+  --enable-encoder=pcm_s16le,pcm_s24le,pcm_s32le,png,bmp \
   \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
