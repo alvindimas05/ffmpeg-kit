@@ -472,7 +472,7 @@ fi
   --disable-vaapi \
   --disable-vdpau \
   \
---disable-everything \
+  --disable-everything \
   --enable-protocol=file \
   --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
   # Input Demuxers
