@@ -476,8 +476,8 @@ fi
   --enable-protocol=file \
   --enable-filter=aresample,aformat,anull,atrim,format,null,setpts,trim \
   --enable-demuxer=flac,aac,mov,wav,ogg,mp3,alac,opus,image2 \
-  --enable-decoder=flac,aac,alac,mp3,opus,pcm_s16le,pcm_s24le,pcm_s32le,vorbis,mjpeg,png,bmp \
-  --enable-parser=aac,flac,mpegaudio,vorbis \
+  --enable-decoder=flac,aac,alac,mp3,opus,pcm_s16le,pcm_s24le,pcm_s32le,vorbis,mjpeg,png,bmp,ac3,eac3 \
+  --enable-parser=aac,flac,mpegaudio,vorbis,ac3 \
   --enable-muxer=wav,image2,image2pipe \
   --enable-encoder=pcm_s16le,pcm_s24le,pcm_s32le,png,bmp \
   \
